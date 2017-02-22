@@ -5,6 +5,10 @@ import numpy as np
 from sklearn import datasets, linear_model
 
 diabetes = datasets.load_diabetes()
+# dataset : http://www4.stat.ncsu.edu/~boos/var.select/diabetes.html
+# features: age, sex, body mass index, average blood pressure, blood serum measurements 1 -> 6
+# target : "quantitative measure of disease progression one year after baseline"
+
 X = diabetes.data
 y = diabetes.target
 
