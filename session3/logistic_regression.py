@@ -10,6 +10,8 @@ data = np.loadtxt('ex2data2.txt', delimiter=',')
 
 X = data[:, 0:2]
 y = data[:, 2]
+print("X: " + str(X.shape))
+print("y: " + str(y.shape))
 
 
 def map_feature(x1, x2):

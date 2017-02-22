@@ -16,8 +16,8 @@ X = np.insert(X, 0, 1, axis=1) # insert a column of "1"s in first position
 Xt = np.transpose(X) # or X.T
 pinv = np.linalg.pinv(Xt.dot(X))
 theta = pinv.dot(Xt).dot(y)
-
 print("theta : " + str(theta))
+
 error = y - X.dot(theta)
 print("J(a,b) = " + str(error.dot(error) / (2 * error.shape[0])))
 
