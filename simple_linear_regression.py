@@ -14,6 +14,10 @@ b = pinv.dot(Xt).dot(y)
 
 a = np.mean(y) - b.dot(np.mean(X))
 
+print("a : " + str(a[0]) + " ; b : " + str(b[0]))
+error = y - a - X.dot(b)
+print("J(a,b) = " + str(error.dot(error) / (2 * error.shape[0])))
+
 plt.scatter(X, y,  color='black')
 plt.plot(X, a + X.dot(b), color='blue', linewidth=3)
 plt.show()
