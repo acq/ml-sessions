@@ -17,6 +17,11 @@ print("theta : " + str(theta))
 error = y - X.dot(theta)
 print("J(a,b) = " + str(error.dot(error) / (2 * error.shape[0])))
 
+# less manual :
+# regr = linear_model.LinearRegression()
+# regr.fit(X, y)
+# plt.plot(diabetes_X_test, regr.predict(diabetes_X_test), color='blue', linewidth=3)
+
 scatter = plt.scatter(y, X.dot(theta),  color='black', label='real vs estimated')
 line, = plt.plot(y, y, color='blue', linewidth=3, label='identity')
 plt.legend(handles=[scatter, line], loc='lower right')
