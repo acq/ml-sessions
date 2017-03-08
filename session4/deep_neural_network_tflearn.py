@@ -12,8 +12,8 @@ import tflearn
 # --------------------------------------
 
 # Using MNIST Dataset
-import tflearn.datasets.mnist as mnist
-mnist_data = mnist.read_data_sets("data", one_hot=True)
+from tensorflow.contrib.learn.python.learn.datasets.mnist import read_data_sets
+mnist_data = read_data_sets("data", one_hot=True)
 
 # User defined placeholders
 with tf.Graph().as_default():
